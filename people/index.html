@@ -3,6 +3,7 @@ layout: flame
 title: People
 ---
 
-{% for post in site.categories.people  %}
+{% assign posts = site.categories.people | sort:"title" %}
+{% for post in posts %}
    {% include onepost.html %}
 {% endfor %}
